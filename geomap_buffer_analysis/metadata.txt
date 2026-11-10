@@ -1,0 +1,19 @@
+[general]
+name=GeoBuffer
+description=Create distance rasters, classify distances, and generate multiple-ring buffers.
+about=Three Processing tools for planar distance analysis, including reference-grid alignment, polygon masking, and distance reclassification. Euclidean Distance requires SciPy in the QGIS Python environment. See the homepage for installation instructions.
+version=0.2.1
+qgisMinimumVersion=3.40
+qgisMaximumVersion=3.99
+author=Kaung Si Thu
+category=Analysis
+hasProcessingProvider=yes
+experimental=True
+icon=icons/rings.svg
+email=kaungsithu.geo@gmail.com
+homepage=https://github.com/kaungsithugis/geobuffer#readme
+repository=https://github.com/kaungsithugis/geobuffer
+tracker=https://github.com/kaungsithugis/geobuffer/issues
+license=GPL-2.0-or-later
+tags=buffer, distance, proximity, raster, reclassification
+changelog=0.2.1 - Prepare the public release with licensing, maintainer contact, source and issue links, and SciPy setup information.
