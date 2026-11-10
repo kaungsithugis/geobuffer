@@ -11,7 +11,6 @@ from qgis.core import (
     Qgis,
     QgsCsException,
     QgsFeatureRequest,
-    QgsProcessing,
     QgsProcessingException,
     QgsProcessingParameterEnum,
     QgsProcessingParameterExtent,
@@ -59,7 +58,7 @@ class EuclideanDistance(BufferAlgorithm):
     def initAlgorithm(self, config=None):
         self.addParameter(QgsProcessingParameterMapLayer(
             "INPUT", "Input features or source raster",
-            types=[QgsProcessing.TypeVectorAnyGeometry, QgsProcessing.TypeRaster]
+            types=[Qgis.ProcessingSourceType.VectorAnyGeometry, Qgis.ProcessingSourceType.Raster]
         ))
         self.add_analysis_crs()
         self.addParameter(QgsProcessingParameterRasterLayer(
@@ -79,7 +78,7 @@ class EuclideanDistance(BufferAlgorithm):
         ))
         self.addParameter(QgsProcessingParameterFeatureSource(
             "AOI", "Output mask (optional polygon layer)",
-            [QgsProcessing.TypeVectorPolygon], optional=True
+            [Qgis.ProcessingSourceType.VectorPolygon], optional=True
         ))
         self.addParameter(QgsProcessingParameterEnum(
             "RASTER_MODE", "Raster sources (band 1 only)",

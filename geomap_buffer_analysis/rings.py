@@ -13,7 +13,6 @@ from qgis.core import (
     QgsField,
     QgsFields,
     QgsGeometry,
-    QgsProcessing,
     QgsProcessingException,
     QgsProcessingParameterBoolean,
     QgsProcessingParameterFeatureSink,
@@ -47,7 +46,7 @@ class MultipleRingBuffer(BufferAlgorithm):
 
     def initAlgorithm(self, config=None):
         self.addParameter(QgsProcessingParameterFeatureSource(
-            "INPUT", "Input features", [QgsProcessing.TypeVectorAnyGeometry]
+            "INPUT", "Input features", [Qgis.ProcessingSourceType.VectorAnyGeometry]
         ))
         self.add_analysis_crs()
         self.addParameter(QgsProcessingParameterString(
@@ -57,7 +56,7 @@ class MultipleRingBuffer(BufferAlgorithm):
             "OUTSIDE", "Outside polygons only", defaultValue=False
         ))
         self.addParameter(QgsProcessingParameterFeatureSink(
-            "OUTPUT", "Buffer rings", QgsProcessing.TypeVectorPolygon
+            "OUTPUT", "Buffer rings", Qgis.ProcessingSourceType.VectorPolygon
         ))
 
     def processAlgorithm(self, parameters, context, feedback):

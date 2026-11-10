@@ -1,4 +1,4 @@
-# GeoBuffer 0.2.1
+# GeoBuffer 0.2.2
 
 A QGIS Processing plugin by Kaung Si Thu. This experimental
 release targets QGIS 3.40–3.x and was tested with QGIS 3.40.6 on Linux.
@@ -6,7 +6,7 @@ release targets QGIS 3.40–3.x and was tested with QGIS 3.40.6 on Linux.
 ## Install and open
 
 1. Open QGIS and go to **Plugins → Manage and Install Plugins → Install from ZIP**.
-2. Select `GeoBuffer_v0.2.1.zip` and click **Install Plugin**.
+2. Select `GeoBuffer_v0.2.2.zip` and click **Install Plugin**.
 3. Open **Processing → Toolbox** and search for **Euclidean Distance**,
    **Multiple Ring Buffer**, or **Reclassify Distance**. The three tools
    also appear under **Plugins → GeoBuffer**.
